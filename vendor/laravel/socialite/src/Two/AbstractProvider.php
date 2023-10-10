@@ -128,7 +128,7 @@ abstract class AbstractProvider implements ProviderContract
      * @param  string  $state
      * @return string
      */
-    abstract public function getAuthUrl($state);
+    abstract protected function getAuthUrl($state);
 
     /**
      * Get the token URL for the provider.
@@ -239,14 +239,26 @@ abstract class AbstractProvider implements ProviderContract
 
         $response = $this->getAccessTokenResponse($this->getCode());
 
-        $this->user = $this->mapUserToObject($this->getUserByToken(
-            $token = Arr::get($response, 'access_token')
-        ));
+        $user = $this->getUserByToken(Arr::get($response, 'access_token'));
 
-        return $this->user->setToken($token)
-                    ->setRefreshToken(Arr::get($response, 'refresh_token'))
-                    ->setExpiresIn(Arr::get($response, 'expires_in'))
-                    ->setApprovedScopes(explode($this->scopeSeparator, Arr::get($response, 'scope', '')));
+        return $this->userInstance($response, $user);
+    }
+
+    /**
+     * Create a user instance from the given data.
+     *
+     * @param  array  $response
+     * @param  array  $user
+     * @return \Laravel\Socialite\Two\User
+     */
+    protected function userInstance(array $response, array $user)
+    {
+        $this->user = $this->mapUserToObject($user);
+
+        return $this->user->setToken(Arr::get($response, 'access_token'))
+            ->setRefreshToken(Arr::get($response, 'refresh_token'))
+            ->setExpiresIn(Arr::get($response, 'expires_in'))
+            ->setApprovedScopes(explode($this->scopeSeparator, Arr::get($response, 'scope', '')));
     }
 
     /**

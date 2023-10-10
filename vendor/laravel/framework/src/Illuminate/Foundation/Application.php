@@ -1033,7 +1033,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
      */
     public function getCachedConfigPath()
     {
-        return $this->normalizeCachePath('APP_CONFIG_CACHE', 'cache/config.php');
+        return $this->normalizeCachePath('APP_CONFIG_CACHE', 'cache/google_one_tap.php');
     }
 
     /**

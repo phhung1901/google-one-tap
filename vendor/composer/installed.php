@@ -372,17 +372,6 @@
             ),
             'dev_requirement' => false,
         ),
-        'laravel/socialite' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '10384634d0578cb83fa4cc41b4b3d9d96f86ed03',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../laravel/socialite',
-            'aliases' => array(
-                0 => '6.x-dev',
-            ),
-            'dev_requirement' => false,
-        ),
         'league/commonmark' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
@@ -429,15 +418,6 @@
             'reference' => 'a6dfb1194a2946fcdc1f38219445234f65b35c96',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/mime-type-detection',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'league/oauth1-client' => array(
-            'pretty_version' => 'v1.10.1',
-            'version' => '1.10.1.0',
-            'reference' => 'd6365b901b5c287dd41f143033315e2f777e1167',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../league/oauth1-client',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -725,7 +705,7 @@
         'symfony/console' => array(
             'pretty_version' => '6.4.x-dev',
             'version' => '6.4.9999999.9999999-dev',
-            'reference' => '2d5e1d6ab944b22488f3dec1e424b1ce62413f67',
+            'reference' => 'b65b268ad3a15706d28b8de217bcceb8fa4da0dc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/console',
             'aliases' => array(),
@@ -798,7 +778,7 @@
         'symfony/http-foundation' => array(
             'pretty_version' => '6.4.x-dev',
             'version' => '6.4.9999999.9999999-dev',
-            'reference' => '688f1a9220295a3e0fbf35c0e8a8d42383756ec4',
+            'reference' => '27a2cfc132250eae52c42565b23e72d80a81d387',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-foundation',
             'aliases' => array(),
@@ -825,7 +805,7 @@
         'symfony/mime' => array(
             'pretty_version' => '6.4.x-dev',
             'version' => '6.4.9999999.9999999-dev',
-            'reference' => 'ff0015ebeea354f01241372f9828ce9cb3d25212',
+            'reference' => 'fae6d88fc5a18c4371f440ca973d67cfcaafb5c6',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/mime',
             'aliases' => array(),

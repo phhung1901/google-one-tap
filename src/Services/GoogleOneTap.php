@@ -1,30 +1,54 @@
 <?php
 namespace GoogleOneTap\Services;
 
-use Google_Client;
-use Illuminate\Http\Request;
+use Google\Client;
+use Illuminate\Support\Arr;
+use Laravel\Socialite\Two\AbstractProvider;
+use Laravel\Socialite\Two\ProviderInterface;
+use Laravel\Socialite\Two\User;
 
-class GoogleOneTap
+class GoogleOneTap extends AbstractProvider implements ProviderInterface
 {
-    public function index(Request $request){
-        if ($_COOKIE['g_csrf_token'] !== $request->input('g_csrf_token')) {
-            // Invalid CSRF token
-            return back();
+    protected function getUserByToken($token): array
+    {
+        $client = $this->getClient();
+        $info = $client->verifyIdToken($token);
+        if (!$info) {
+            throw new \Exception('Invalid token');
         }
 
-        $idToken = $request->input('credential');
+        return $info;
+    }
 
-        $client = new Google_Client([
-            'client_id' => config('services.google.client_id')
+    protected function mapUserToObject(array $user)
+    {
+        return (new User)->setRaw($user)->map([
+            'id' => Arr::get($user, 'sub'),
+            'nickname' => Arr::get($user, 'nickname'),
+            'name' => Arr::get($user, 'name'),
+            'email' => Arr::get($user, 'email'),
+            'avatar' => $avatarUrl = Arr::get($user, 'picture'),
+            'avatar_original' => $avatarUrl,
+            'given_name' => Arr::get($user, 'given_name'),
+            'family_name' => Arr::get($user, 'family_name'),
         ]);
+    }
 
-        $payload = $client->verifyIdToken($idToken);
+    private function getClient(): Client
+    {
+        return new Client([
+            'client_id' => config('services.google.client_id'),
+            'client_secret' => config('services.google.client_secret'),
+        ]);
+    }
 
-        if (!$payload) {
-            // Invalid ID token
-            return back();
-        }
+    protected function getAuthUrl($state)
+    {
+        // TODO: Implement getAuthUrl() method.
+    }
 
-        dd($payload);
+    protected function getTokenUrl()
+    {
+        // TODO: Implement getTokenUrl() method.
     }
 }

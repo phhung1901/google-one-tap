@@ -45,7 +45,7 @@ class GitlabProvider extends AbstractProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getAuthUrl($state)
+    protected function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase($this->host.'/oauth/authorize', $state);
     }

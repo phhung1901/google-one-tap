@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9bba4005f4bb6d71dba4bd68c83307c",
+    "content-hash": "0bbe3d878194f6d1255e106a91d4b1c1",
     "packages": [
         {
             "name": "brick/math",
@@ -1472,76 +1472,6 @@
             "time": "2023-09-21T14:56:50+00:00"
         },
         {
-            "name": "laravel/socialite",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/socialite.git",
-                "reference": "10384634d0578cb83fa4cc41b4b3d9d96f86ed03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/10384634d0578cb83fa4cc41b4b3d9d96f86ed03",
-                "reference": "10384634d0578cb83fa4cc41b4b3d9d96f86ed03",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^6.0|^7.0",
-                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0",
-                "illuminate/http": "^6.0|^7.0|^8.0|^9.0|^10.0",
-                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0",
-                "league/oauth1-client": "^1.10.1",
-                "php": "^7.2|^8.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^8.0|^9.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Socialite\\SocialiteServiceProvider"
-                    ],
-                    "aliases": {
-                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Socialite\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
-            "homepage": "https://laravel.com",
-            "keywords": [
-                "laravel",
-                "oauth"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/socialite/issues",
-                "source": "https://github.com/laravel/socialite"
-            },
-            "time": "2023-09-04T08:56:00+00:00"
-        },
-        {
             "name": "league/commonmark",
             "version": "dev-main",
             "source": {
@@ -1937,82 +1867,6 @@
                 }
             ],
             "time": "2023-08-05T12:09:49+00:00"
-        },
-        {
-            "name": "league/oauth1-client",
-            "version": "v1.10.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth1-client.git",
-                "reference": "d6365b901b5c287dd41f143033315e2f777e1167"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/d6365b901b5c287dd41f143033315e2f777e1167",
-                "reference": "d6365b901b5c287dd41f143033315e2f777e1167",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-openssl": "*",
-                "guzzlehttp/guzzle": "^6.0|^7.0",
-                "guzzlehttp/psr7": "^1.7|^2.0",
-                "php": ">=7.1||>=8.0"
-            },
-            "require-dev": {
-                "ext-simplexml": "*",
-                "friendsofphp/php-cs-fixer": "^2.17",
-                "mockery/mockery": "^1.3.3",
-                "phpstan/phpstan": "^0.12.42",
-                "phpunit/phpunit": "^7.5||9.5"
-            },
-            "suggest": {
-                "ext-simplexml": "For decoding XML-based responses."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-develop": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth1\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Corlett",
-                    "email": "bencorlett@me.com",
-                    "homepage": "http://www.webcomm.com.au",
-                    "role": "Developer"
-                }
-            ],
-            "description": "OAuth 1.0 Client Library",
-            "keywords": [
-                "Authentication",
-                "SSO",
-                "authorization",
-                "bitbucket",
-                "identity",
-                "idp",
-                "oauth",
-                "oauth1",
-                "single sign on",
-                "trello",
-                "tumblr",
-                "twitter"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/oauth1-client/issues",
-                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.1"
-            },
-            "time": "2022-04-15T14:02:14+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3467,12 +3321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "2d5e1d6ab944b22488f3dec1e424b1ce62413f67"
+                "reference": "b65b268ad3a15706d28b8de217bcceb8fa4da0dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/2d5e1d6ab944b22488f3dec1e424b1ce62413f67",
-                "reference": "2d5e1d6ab944b22488f3dec1e424b1ce62413f67",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b65b268ad3a15706d28b8de217bcceb8fa4da0dc",
+                "reference": "b65b268ad3a15706d28b8de217bcceb8fa4da0dc",
                 "shasum": ""
             },
             "require": {
@@ -3550,7 +3404,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-09T11:19:22+00:00"
+            "time": "2023-09-29T03:15:27+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -3987,12 +3841,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "688f1a9220295a3e0fbf35c0e8a8d42383756ec4"
+                "reference": "27a2cfc132250eae52c42565b23e72d80a81d387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/688f1a9220295a3e0fbf35c0e8a8d42383756ec4",
-                "reference": "688f1a9220295a3e0fbf35c0e8a8d42383756ec4",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/27a2cfc132250eae52c42565b23e72d80a81d387",
+                "reference": "27a2cfc132250eae52c42565b23e72d80a81d387",
                 "shasum": ""
             },
             "require": {
@@ -4056,7 +3910,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-08T01:46:22+00:00"
+            "time": "2023-10-02T18:56:53+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -4258,12 +4112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "ff0015ebeea354f01241372f9828ce9cb3d25212"
+                "reference": "fae6d88fc5a18c4371f440ca973d67cfcaafb5c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/ff0015ebeea354f01241372f9828ce9cb3d25212",
-                "reference": "ff0015ebeea354f01241372f9828ce9cb3d25212",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/fae6d88fc5a18c4371f440ca973d67cfcaafb5c6",
+                "reference": "fae6d88fc5a18c4371f440ca973d67cfcaafb5c6",
                 "shasum": ""
             },
             "require": {
@@ -4334,7 +4188,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-10T06:06:59+00:00"
+            "time": "2023-09-29T16:21:02+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -6004,9 +5858,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "google/apiclient": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

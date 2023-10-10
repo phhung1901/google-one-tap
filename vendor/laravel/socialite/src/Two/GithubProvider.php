@@ -16,16 +16,9 @@ class GithubProvider extends AbstractProvider implements ProviderInterface
     protected $scopes = ['user:email'];
 
     /**
-     * The separating character for the requested scopes.
-     *
-     * @var string
-     */
-    protected $scopeSeparator = ' ';
-
-    /**
      * {@inheritdoc}
      */
-    public function getAuthUrl($state)
+    protected function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase('https://github.com/login/oauth/authorize', $state);
     }

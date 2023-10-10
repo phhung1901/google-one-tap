@@ -30,13 +30,11 @@ class RawMessage
         if (\is_string($this->message)) {
             return $this->message;
         }
-
-        $message = '';
-        foreach ($this->message as $chunk) {
-            $message .= $chunk;
+        if ($this->message instanceof \Traversable) {
+            $this->message = iterator_to_array($this->message, false);
         }
 
-        return $this->message = $message;
+        return $this->message = implode('', $this->message);
     }
 
     public function toIterable(): iterable
@@ -47,9 +45,12 @@ class RawMessage
             return;
         }
 
+        $message = '';
         foreach ($this->message as $chunk) {
+            $message .= $chunk;
             yield $chunk;
         }
+        $this->message = $message;
     }
 
     /**
