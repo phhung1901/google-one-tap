@@ -2,7 +2,7 @@
   "name": "phhung1901/google_one_tap",
   "description": "Login with google one tap/google popup login",
   "type": "php",
-  "license": "beta",
+  "license": "MIT",
   "authors": [
     {
       "name": "phhung1901",
