@@ -1,0 +1,24 @@
+{
+  "name": "phhung1901/google_one_tap",
+  "description": "Login with google one tap/google popup login",
+  "type": "php",
+  "license": "beta",
+  "authors": [
+    {
+      "name": "phhung1901",
+      "email": "phhung190101@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.1",
+    "laravel/framework": "^9.0",
+    "google/apiclient": "^2.0@dev",
+    "laravel/socialite": "^6.0@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "GoogleOneTap\\": "src/"
+    }
+  }
+}
