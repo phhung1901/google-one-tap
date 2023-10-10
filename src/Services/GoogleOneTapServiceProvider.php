@@ -13,17 +13,16 @@ class GoogleOneTapServiceProvider extends ServiceProvider
     public function boot(){
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'google_one_tap');
 
+        $this->publishes([
+            __DIR__.'/../resources/views/components/' => resource_path('views/components/google_one_tap'),
+        ], 'google_one_tap-components');
+
         $socialite = $this->app->make(Factory::class);
 
         $socialite->extend(
             'google-one-tap',
             fn() => $socialite->buildProvider(GoogleOneTap::class, config('services.google')),
         );
-
-        Blade::directive('googleOneTapScript', function () {
-            $tag = '<script src="https://accounts.google.com/gsi/client" async defer></script>';
-            return "<?php echo '".$tag."'.PHP_EOL ?>";
-        });
     }
 
     /**
