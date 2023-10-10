@@ -2,7 +2,6 @@
 namespace GoogleOneTap\Services;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Blade;
 use Laravel\Socialite\Contracts\Factory;
 
 class GoogleOneTapServiceProvider extends ServiceProvider
@@ -11,10 +10,10 @@ class GoogleOneTapServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(){
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'google_one_tap');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'google_one_tap');
 
         $this->publishes([
-            __DIR__.'/../resources/views/components/' => resource_path('views/components/google_one_tap'),
+            __DIR__.'/../../resources/views' => resource_path('views/components/google_one_tap'),
         ], 'google_one_tap-components');
 
         $socialite = $this->app->make(Factory::class);
