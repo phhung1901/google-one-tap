@@ -43,7 +43,7 @@ php artisan vendor:publish --tag=google_one_tap-components
 ```
 Now, add the component wherever you want google_one_tap to be used.
 ```html
-<x-google_one_tap.components.onload/>
+<x-google_one_tap.onload/>
 ```
 
 ### 3. Returned User fields
