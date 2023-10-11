@@ -33,6 +33,11 @@ composer require phhung1901/google_one_tap
 <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
 ```
 ### 2. Next, you must publish the component
+Add to `providers` config/app.php
+```php
+\GoogleOneTap\Services\GoogleOneTapServiceProvider::class,
+```
+
 ```bash
 php artisan vendor:publish --tag=google_one_tap-components
 ```
