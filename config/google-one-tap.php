@@ -30,7 +30,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Enable Google One Tap
+    | Enable Google One Tap (string)
     |--------------------------------------------------------------------------
     |
     | This determines whether to display One tap or not. The default value is
@@ -38,8 +38,7 @@ return [
     |
     */
 
-    'enable' => (bool) env('ENABLE_GOOGLE_ONE_TAP', true),
-
+    'enable' => env('ENABLE_GOOGLE_ONE_TAP', "true"),
 
     /*
     |--------------------------------------------------------------------------

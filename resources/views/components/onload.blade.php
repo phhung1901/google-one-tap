@@ -3,7 +3,7 @@
 
     $attributesText = '';
 
-    foreach ($config as $key => $value) {
+    foreach ($custom as $key => $value) {
         if (is_bool($value)) {
             $value = ($value) ? 'true' : 'false';
         }

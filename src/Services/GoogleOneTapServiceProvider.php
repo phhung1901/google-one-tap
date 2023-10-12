@@ -12,13 +12,15 @@ class GoogleOneTapServiceProvider extends ServiceProvider
     public function boot(){
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'google_one_tap');
 
-        $this->publishes([
-            __DIR__.'/../../config/google-one-tap.php' => config_path('google-one-tap.php'),
-        ], 'config');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../../config/google-one-tap.php' => config_path('google-one-tap.php'),
+            ], 'google_one_tap');
 
-        $this->publishes([
-            __DIR__.'/../../resources/views/components/' => resource_path('views/components/google_one_tap'),
-        ], 'google_one_tap-components');
+            $this->publishes([
+                __DIR__.'/../../resources/views/components/' => resource_path('views/components/google_one_tap'),
+            ], 'google_one_tap');
+        }
 
         $socialite = $this->app->make(Factory::class);
 
