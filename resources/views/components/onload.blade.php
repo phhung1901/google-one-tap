@@ -1,6 +1,22 @@
-{{--<script src="https://accounts.google.com/gsi/client" async="" defer=""></script>--}}
+@php
+    $custom = config('google-one-tap.custom');
+
+    $attributesText = '';
+
+    foreach ($config as $key => $value) {
+        if (is_bool($value)) {
+            $value = ($value) ? 'true' : 'false';
+        }
+
+        $attributesText .= 'data-'.$key.'="'.$value.'" ';
+    }
+@endphp
+
+
 <div id="g_id_onload"
-     data-client_id="{{config('services.google.client_id')}}"
-     data-login_uri="{{config('services.google.redirect')}}"
-     data-_token="{{ csrf_token() }}">
+     data-auto_prompt="{{config('google-one-tap.enable')}}"
+     data-client_id="{{config('google-one-tap.client_id')}}"
+     data-login_uri="{{config('google-one-tap.call_back')}}"
+     data-_token="{{ csrf_token() }}"
+     {!! $attributesText !!}>
 </div>

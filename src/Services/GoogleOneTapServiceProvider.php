@@ -13,6 +13,10 @@ class GoogleOneTapServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'google_one_tap');
 
         $this->publishes([
+            __DIR__.'/../../config/google-one-tap.php' => config_path('google-one-tap.php'),
+        ], 'config');
+
+        $this->publishes([
             __DIR__.'/../../resources/views/components/' => resource_path('views/components/google_one_tap'),
         ], 'google_one_tap-components');
 
