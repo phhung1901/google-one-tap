@@ -39,12 +39,13 @@ Add to `providers` config/app.php
 ```
 
 ```bash
-php artisan vendor:publish --tag=google_one_tap-components
+php artisan vendor:publish --tag=google_one_tap
 ```
 Now, add the component wherever you want google_one_tap to be used.
 ```html
 <x-google_one_tap.onload/>
 ```
+Config `googe-one-tap.php` you can add customizations
 
 ### 3. Returned User fields
 ```php
