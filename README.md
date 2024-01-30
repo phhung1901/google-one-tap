@@ -2,7 +2,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/phhung1901/google_one_tap.svg?style=flat-square)](https://packagist.org/packages/phhung1901/google_one_tap)
 
 # google-one-tap
-Login with google one tap/google popup login
+Login with google one tap/google popup login for Laravel
 ![title](https://developers.google.com/static/identity/gsi/web/images/one-tap-sign-up.png?hl=vi)
 
 ---
