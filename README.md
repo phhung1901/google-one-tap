@@ -9,7 +9,7 @@ Login with google one tap/google popup login for Laravel
 ## Installation
 **requires**
 - php: >=8.1
-- laravel/framework: ^9.0 || ^10.0
+- laravel/framework: ^9.0 || ^10.0 || ^11.0
 
 ```bash
 composer require phhung1901/google_one_tap
