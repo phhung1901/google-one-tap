@@ -1,7 +1,6 @@
 <?php
 namespace GoogleOneTap\Services;
 
-use Google\Client;
 use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;
@@ -11,9 +10,7 @@ class GoogleOneTap extends AbstractProvider implements ProviderInterface
 {
     protected function getUserByToken($token): array
     {
-        $client = $this->getClient();
-        $info = $client->verifyIdToken($token);
-        if (!$info) {
+        if (!$info = (new GoogleOneTapVerifyJwt())->verifyIdToken($token)) {
             throw new \Exception('Invalid token');
         }
 
@@ -31,14 +28,6 @@ class GoogleOneTap extends AbstractProvider implements ProviderInterface
             'avatar_original' => $avatarUrl,
             'given_name' => Arr::get($user, 'given_name'),
             'family_name' => Arr::get($user, 'family_name'),
-        ]);
-    }
-
-    private function getClient(): Client
-    {
-        return new Client([
-            'client_id' => config('services.google.client_id'),
-            'client_secret' => config('services.google.client_secret'),
         ]);
     }
 
