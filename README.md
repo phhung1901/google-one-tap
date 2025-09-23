@@ -3,13 +3,16 @@
 
 # google-one-tap
 Login with google one tap/google popup login for Laravel
+
+**✨ Now supports Laravel 12!**
+
 ![title](https://developers.google.com/static/identity/gsi/web/images/one-tap-sign-up.png?hl=vi)
 
 ---
 ## Installation
 **requires**
-- php: >=8.1
-- laravel/framework: ^9.0 || ^10.0 || ^11.0
+- php: >=8.2
+- laravel/framework: ^9.0|^10.0|^11.0|^12.0
 
 ```bash
 composer require phhung1901/google_one_tap
